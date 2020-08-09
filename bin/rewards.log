@@ -1,0 +1,16 @@
+# Logfile created on 2020-08-08 01:14:49 +0000 by logger.rb/66358
+I, [2020-08-08T01:14:49.398287 #12525]  INFO -- : Parsing given input json file: events.json
+I, [2020-08-08T01:14:49.398404 #12525]  INFO -- : Processing event: {"action"=>"new_customer", "name"=>"Jessica", "timestamp"=>"2020-07-01T00:00:00-05:00"}
+I, [2020-08-08T01:14:49.398438 #12525]  INFO -- : Finished processing event
+I, [2020-08-08T01:14:49.398466 #12525]  INFO -- : Processing event: {"action"=>"new_customer", "name"=>"Will", "timestamp"=>"2020-07-01T01:00:00-05:00"}
+I, [2020-08-08T01:14:49.398489 #12525]  INFO -- : Finished processing event
+I, [2020-08-08T01:14:49.398513 #12525]  INFO -- : Processing event: {"action"=>"new_customer", "name"=>"Elizabeth", "timestamp"=>"2020-07-01T12:00:00-05:00"}
+I, [2020-08-08T01:14:49.398536 #12525]  INFO -- : Finished processing event
+I, [2020-08-08T01:14:49.398565 #12525]  INFO -- : Processing event: {"action"=>"new_order", "customer"=>"Jessica", "amount"=>12.5, "timestamp"=>"2020-07-01T12:15:57-05:00"}
+I, [2020-08-08T01:14:49.398615 #12525]  INFO -- : Finished processing event
+I, [2020-08-08T01:14:49.398642 #12525]  INFO -- : Processing event: {"action"=>"new_order", "customer"=>"Jessica", "amount"=>16.5, "timestamp"=>"2020-07-01T10:01:00-05:00"}
+I, [2020-08-08T01:14:49.398677 #12525]  INFO -- : Finished processing event
+I, [2020-08-08T01:14:49.398703 #12525]  INFO -- : Processing event: {"action"=>"new_order", "customer"=>"Will", "amount"=>8.9, "timestamp"=>"2020-07-01T12:20:00-05:00"}
+I, [2020-08-08T01:14:49.398737 #12525]  INFO -- : Finished processing event
+I, [2020-08-08T01:14:49.398763 #12525]  INFO -- : Processing event: {"action"=>"new_order", "customer"=>"Will", "amount"=>1.5, "timestamp"=>"2020-07-01T12:21:00-05:00"}
+I, [2020-08-08T01:14:49.398795 #12525]  INFO -- : Finished processing event
