@@ -43,36 +43,35 @@ class Timer
   def add_minutes(mins)
       return self if mins == 0
 
-      _hour = @hour + (mins/60).remainder(24)
-      _minutes = @minutes + (mins%60)
-      _meridian = @meridian
+      @hour += (mins/60).remainder(24)
+      @minutes += (mins%60)
 
-      if _minutes == 60
-         _hour += 1
-         _minutes = 0
-      elsif _minutes > 60
-        _hour += 1
-        _minutes -= 60         
+      if self.minutes == 60
+         @hour += 1
+         @minutes = 0
+      elsif self.minutes > 60
+        @hour += 1
+        @minutes -= 60         
       end 
      
-      if _hour == 12
-        _meridian = (_meridian-1).abs
-      elsif _hour > 12
-        _hour -= 12
-        _meridian = (_meridian-1).abs
-      elsif _hour < 0
-        _hour = 12 + _hour
-        _meridian = (_meridian-1).abs
+      if self.hour == 12
+        @meridian = (self.meridian-1).abs
+      elsif self.hour > 12
+        @hour -= 12
+        @meridian = (self.meridian-1).abs
+      elsif self.hour < 0
+        @hour += 12
+        @meridian = (self.meridian-1).abs
       end 
 
-      if _minutes < 10
-        _minutes = "0#{_minutes}"
-      end 
-      "#{_hour}:#{_minutes} #{_meridian == 0 ? 'AM' : 'PM'}"
+      
+      return self 
+
+      #"#{_hour}:#{_minutes} #{_meridian == 0 ? 'AM' : 'PM'}"
   end
 
   def to_s
-     "#{self.hour}:#{self.minutes} #{self.meridian == 0 ? 'AM' : 'PM'}"
+     "#{self.hour}:#{(self.minutes < 10 ? "0#{self.minutes}" : self.minutes)} #{self.meridian == 0 ? 'AM' : 'PM'}"
   end 
 
 end
