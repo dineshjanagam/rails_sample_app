@@ -34,7 +34,6 @@ class Timer
       raise "Invalid time format, Expected format: HH:MM AM|PM" unless (0..59) === @minutes
   end
 
-  # Parsing the time
   def parse()
     self.parse_time
     self.validate_time
@@ -63,11 +62,7 @@ class Timer
         @hour += 12
         @meridian = (self.meridian-1).abs
       end 
-
-      
-      return self 
-
-      #"#{_hour}:#{_minutes} #{_meridian == 0 ? 'AM' : 'PM'}"
+      self 
   end
 
   def to_s
